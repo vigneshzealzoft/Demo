@@ -305,6 +305,10 @@ cur=conn.cursor()
 #     response['message'] = 'Listening completed.'
 #     return jsonify(response)  
 
+@app.route('/')
+def hello_world():
+    return 'Hello, world!'
+
 @app.route('/check', methods=['POST'])
 def Check():
     content = request.json
